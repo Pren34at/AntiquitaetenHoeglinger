@@ -11,13 +11,11 @@ export default function Orders({auth}: PageProps) {
         user = {auth.user}
         header = {<h2 className="font-semibold text-xl text-gray-800 leading-tight">Orders</h2>}
         >
-                <form action='Orders/{{$product_id}}' method='POST'>
-                        @csrf
+                <form action='Orders/{$product_id}' method='POST'>
                         <div className="form-group">
                              <input type="text" className="form-control" name="name" placeholder="Add name..."/>
-                             <button type="submit" className = "btn btn-primary">Add</button>
+                             <Button href='Orders/{Auth::id()}' children="Order"></Button>
                         </div>
-                <Button href='Orders/{Auth::id()}' children="Order"></Button>
             </form>
         </AuthenticatedLayout>
     )

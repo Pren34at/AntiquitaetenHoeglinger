@@ -12,7 +12,7 @@ Route::get('/Orders', function(){
     return Inertia::render('Orders');
 })->middleware(['auth', 'verified']) -> name("Orders");
 
-Route::get('/Orders/{order}', [OrderController::class, 'test']);
+Route::post('/Orders/{order}', [OrderController::class, 'test']);
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
