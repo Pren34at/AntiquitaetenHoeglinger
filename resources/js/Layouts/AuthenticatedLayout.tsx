@@ -5,6 +5,7 @@ import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
 import { User } from '@/types';
+import { If, Then, Else, When, Unless, Switch, Case, Default } from 'react-if';
 
 export default function Authenticated({ user, header, children }: PropsWithChildren<{ user: User, header?: ReactNode }>) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
@@ -27,6 +28,9 @@ export default function Authenticated({ user, header, children }: PropsWithChild
                                 </NavLink>
                                 <NavLink href={route('Orders')} active={route().current('Orders')}>
                                     Orders
+                                </NavLink>
+                                <NavLink href ={route('Products')} active ={route().current('Products')}>
+                                    Products
                                 </NavLink>
                             </div>
 

@@ -8,7 +8,7 @@ const fw: CSS.Properties = {
     fontWeight: 900, 
 }
 
-export default function Dashboard({ auth}: PageProps) {
+export default function adminDashboard({ auth}: PageProps) {
     return (
         <AuthenticatedLayout
             user={auth.user}
@@ -20,8 +20,8 @@ export default function Dashboard({ auth}: PageProps) {
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div className="p-6 text-gray-900" style={fw}>View Statistics</div>
-                        <div className ="p-6 text-gray-900">Orders</div>
-                        <button className ="p-6 text-gray-900"><a href="/Orders">Order Here</a></button>
+                        <div className ="p-6 text-gray-900">View Orders</div>
+                        <button className ="p-6 text-gray-900"><a href="/addAdmin">add Admin</a></button>
                     </div>
                 </div>
             </div>
